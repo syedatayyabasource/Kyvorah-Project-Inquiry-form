@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kyvorah Software Solutions — project inquiry and requirement submission form.">
+  <title>Kyvorah | Start a Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Kyvorah home">
+        <span class="brand-mark">K</span>
+        <span>
+          <strong>Kyvorah</strong>
+          <small>Software Solutions</small>
+        </span>
+      </a>
+      <div class="top-links">
+        <span class="status"><span class="status-dot"></span> Secure project inquiry</span>
+        <a href="https://kyvorah.netlify.app/" target="_blank" rel="noreferrer">Website ↗</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="intro">
+        <p class="eyebrow">KYVORAH · SOFTWARE SOLUTIONS</p>
+        <h1>Let's build something<br><em>worth launching.</em></h1>
+        <p class="lead">Tell us what you are planning. Share your requirements, timeline and project brief — our team will review the details and get back to you.</p>
+
+        <div class="service-strip">
+          <span>AI & ML</span>
+          <span>Web Development</span>
+          <span>Software Solutions</span>
+          <span>UI/UX</span>
+        </div>
+
+        <div class="process">
+          <div><b>01</b><span><strong>Share your brief</strong><small>Tell us what you need and upload supporting details.</small></span></div>
+          <div><b>02</b><span><strong>We review</strong><small>Your requirements are validated before submission.</small></span></div>
+          <div><b>03</b><span><strong>Start the conversation</strong><small>Receive a submission reference for follow-up.</small></span></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="form-title">
+        <div class="card-head">
+          <div>
+            <p class="mini-label">PROJECT INQUIRY</p>
+            <h2 id="form-title">Tell us about your project</h2>
+          </div>
+          <span class="required-note">* Required</span>
+        </div>
+
+        <div id="banner" class="banner" role="alert" aria-live="polite"></div>
+
+        <form id="projectForm" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="fullName">Full name <span>*</span></label>
+              <input id="fullName" name="fullName" type="text" placeholder="e.g. Tayyaba Zahra" autocomplete="name">
+              <small class="error" id="fullNameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Work email <span>*</span></label>
+              <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email">
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number <span>*</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="+92 300 1234567" autocomplete="tel">
+              <small class="error" id="phoneError"></small>
+            </div>
+
+            <div class="field">
+              <label for="service">What do you need? <span>*</span></label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>AI & ML Solution</option>
+                <option>Web Development</option>
+                <option>Full-Stack Application</option>
+                <option>UI/UX Design</option>
+                <option>Custom Software</option>
+              </select>
+              <small class="error" id="serviceError"></small>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferred discussion date <span>*</span></label>
+              <input id="date" name="date" type="date">
+              <small class="error" id="dateError"></small>
+            </div>
+
+            <div class="field">
+              <label for="budget">Estimated budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option>Under PKR 100,000</option>
+                <option>PKR 100,000 – 250,000</option>
+                <option>PKR 250,000 – 500,000</option>
+                <option>PKR 500,000+</option>
+                <option>Not decided yet</option>
+              </select>
+              <small class="error" id="budgetError"></small>
+            </div>
+
+            <div class="field full">
+              <label for="projectFile">Project brief / reference file <span>*</span></label>
+              <input id="projectFile" name="projectFile" type="file" accept=".pdf,image/png,image/jpeg,image/webp,.doc,.docx">
+              <small class="hint">PDF, DOC, DOCX, JPG, PNG or WEBP · max 5 MB</small>
+              <small class="error" id="fileError"></small>
+            </div>
+
+            <div class="field full">
+              <label for="message">Project requirements <span>*</span></label>
+              <textarea id="message" name="message" maxlength="700" rows="5" placeholder="Briefly describe your idea, key features, target users, or current problem..."></textarea>
+              <div class="field-meta"><small class="hint">Minimum 30 characters</small><small id="counter">0 / 700</small></div>
+              <small class="error" id="messageError"></small>
+            </div>
+          </div>
+
+          <input id="website" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+          <div class="form-footer">
+            <p>Your information is used only to review this project inquiry.</p>
+            <button id="submitBtn" type="submit">
+              <span id="btnText">Send project inquiry</span>
+              <span id="spinner" class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span>© Kyvorah Software Solutions</span>
+      <span>AI · Web · Software</span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "week3-form-validation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Professional Week 3 Full Stack Web Development form with client/server validation and file upload.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
